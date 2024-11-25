@@ -1,0 +1,37 @@
+#body{
+    align-content: center;
+}
+
+.colorFondo {
+    background-color: #262626;
+}
+
+.h1size {
+    font-size:xx-large;
+    color: #00626d;
+}
+
+.h2{
+  color: rgb(182, 3, 3);
+}
+
+.h3size {
+  font-size:large;
+  color: #00626d;
+}
+
+.h4size{
+  font-size: medium;
+  color: darkgray;
+}
+
+.colorBlanco{
+  color: white;
+}
+
+
+.nav-link:hover {
+  color: #b60303; 
+  background-color: #023e61; 
+  border-radius: 5px; 
+}
