@@ -17,7 +17,8 @@
                     <a class="nav-link {{Request::is('nosotros') ? 'text-warning' : 'text-light' }}" href="#">NOSOTROS</a>
                 </li>
                 <li class="nav-item mx-1">
-                    <a class="nav-link {{Request::is('contacto') ? 'text-warning' : 'text-light' }}" href="#">CONTACTO</a>
+                <li class="nav-item mx-1 ">
+                    <a class="nav-link {{Request::is('contacto') ? 'text-warning' : 'text-light' }}" href="{{route('contacto.index')}}">CONTACTO</a>
                 </li>
                 <li class="nav-item mx-1 ">
                     <a class="nav-link {{Request::is('clientes') ? 'text-warning' : 'text-light' }}" href="#"> CLIENTES</a>

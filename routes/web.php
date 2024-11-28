@@ -25,5 +25,5 @@ Route::middleware('auth')->group(function () {
 Route::resource('ventas', VentasController::class);
 Route::get('/contacto', function () {
     return view('contacto.index');
-});
+})->name('contacto.index');
 require __DIR__.'/auth.php';
