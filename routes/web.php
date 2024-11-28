@@ -27,3 +27,12 @@ Route::get('/contacto', function () {
     return view('contacto.index');
 })->name('contacto.index');
 require __DIR__.'/auth.php';
+Route::view('/sistemas','sistemas.index')
+->middleware(['auth', 'verified', 'sistemas'])
+->name('sistemas.index');
+Route::view('/ventas','ventas.index')
+->middleware(['auth', 'verified', 'ventas'])
+->name('ventas.index');
+Route::view('/clientes','clientes.index')
+->middleware(['auth', 'verified', 'cliente'])
+->name('clientes.index');
