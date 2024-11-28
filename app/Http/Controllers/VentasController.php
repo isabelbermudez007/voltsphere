@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Auto;
+use App\Models\Ventas;
 use Illuminate\Http\Request;
 
-class AutoController extends Controller
+class VentasController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('autos.index');
+        return view('ventas.index');
     }
 
     /**
@@ -34,7 +34,7 @@ class AutoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Auto $auto)
+    public function show(Ventas $ventas)
     {
         //
     }
@@ -42,7 +42,7 @@ class AutoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Auto $auto)
+    public function edit(Ventas $ventas)
     {
         //
     }
@@ -50,7 +50,7 @@ class AutoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Auto $auto)
+    public function update(Request $request, Ventas $ventas)
     {
         //
     }
@@ -58,7 +58,7 @@ class AutoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Auto $auto)
+    public function destroy(Ventas $ventas)
     {
         //
     }
