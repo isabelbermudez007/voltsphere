@@ -12,7 +12,7 @@
         <h1 class="text-warning text-center mb-5">TESTDRIVE</h1>
     </div>
 @endsection
-@section('content')
+@section('content2')
     <div class="container-fluid">
         <h1 class="h1size mt-2 ms-5">Formulario de Ejemplo</h1>
         <div class="row justify-content-center">

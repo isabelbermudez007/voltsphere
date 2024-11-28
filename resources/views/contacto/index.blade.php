@@ -1,6 +1,24 @@
-@section('content2')
+@extends('layouts.app')
+@section('title', 'contacto')
+@section('aside')
+    <div class="col-12 col-md-4 p-0 mb-5 colorFondo">
+        <h2 class="text-warning ms-3 mt-2 mb-5">Hola</h2>
+        <div>
+            <img class="ms-3 img-fluid mb-5" src="../img/personas/5.png" alt="">
+        </div>
+        <div>
+            <h3 class="text-warning ms-3 mb-5">Gracias por contactarnos !</h3>
+            <p class="text-warning ms-3 mb-5 fs-5">Estaremos contestando tu consulta a la brevedad</p>
+        </div>
+
+        <h1 class="text-warning text-center mb-5">CONTACTO</h1>
+    </div>
+
+@endsection
+@section('content1')
+
     <div class="container-fluid">
-        <h1 class="h1size mt-2 ms-5">Modifica tu perfil</h1>
+        <h1 class="h1size mt-2 ms-5">Formulario de Ejemplo</h1>
         <div class="row justify-content-center">
 
 
@@ -48,4 +66,6 @@
 
         </div>
     </div>
+
+
 @endsection

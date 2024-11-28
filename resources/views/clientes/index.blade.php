@@ -1,7 +1,8 @@
-@section('content')
+@section('content1')
     @include('partials.services')
-</div>
-</div>
+@endsection
+@section('content2')
+
 <div class="car-section d-flex align-items-center justify-content-center mt-5">
     <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner">

@@ -9,9 +9,11 @@
 
                 @include('includes.navbar')
 
-                @yield('content')
-            
-        
+                @yield('content1')
+
+            </div>
+        </div>
+        @yield('content2')
 
         @include('includes.footer')
     </div>

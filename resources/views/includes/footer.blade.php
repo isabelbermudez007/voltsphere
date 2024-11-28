@@ -1,4 +1,5 @@
-<div class="row colorFondo">
+
+<footer class="row mt-auto colorFondo">
     <div class="col-sm-12 col-md-6">
         <nav class="navbar navbar-expand-md navbar-dark colorFondo ">
             <div class="container-fluid">
@@ -47,6 +48,6 @@
         <h4 class="h4size">Whatsapp - 011 5032-0076</h4>
         <h4 class="h4size">email - contacto@voltsphere.com</h4>
     </div>
-</div>
+</footer>
 
 

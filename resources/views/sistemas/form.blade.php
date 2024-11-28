@@ -1,4 +1,4 @@
-@section('content')
+@section('content2')
     <div class="container-fluid">
         <h1 class="h1size mt-2 ms-5">Formulario Sistemas</h1>
         <div class="row justify-content-center">

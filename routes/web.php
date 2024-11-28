@@ -23,7 +23,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('autos', AutoController::class);
 //});
 Route::resource('ventas', VentasController::class);
-Route::get('/contact', function () {
-    return view('contact.index');
+Route::get('/contacto', function () {
+    return view('contacto.index');
 });
 require __DIR__.'/auth.php';

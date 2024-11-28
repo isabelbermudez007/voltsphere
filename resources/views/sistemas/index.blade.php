@@ -1,4 +1,4 @@
-@section('content')
+@section('content2')
     <div class="container-fluid">
 
         <div class="row justify-content-center">
@@ -29,8 +29,7 @@
         </div>
     </div>
     <div class="car-section d-flex align-items-center  ms-5 mt-5">
-        <!-- FORMULARIO DE BUSQUEDA
-    imagen ver cliente -->
+        
         <div class="col-sm-2 align-items-center mt-2">
             <a href="../formularios/formSistemas.html"><img src="../img/iconos/ventas/8.png" alt="Icono 8"
                     class="img-fluid"></a>

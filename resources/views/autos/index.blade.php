@@ -1,25 +1,14 @@
 @extends('layouts.app')
 @section('title', 'autos')
 @section('aside')
-    <div class="col-md-4 p-0 mb-5">
-        <div id="carouselExampleSlidesOnly " class="carousel slide " data-bs-ride="carousel">
-            <div class="carousel-inner colorFondo">
-                <!-- IMAGENES-->
-                @for ($i = 1; $i <= 3; $i++)
-                    <div class="carousel-item active ">
-                        <a href="#"><img src="{{ asset('/img/gral/slider/sl' . $i . '.png') }}" class="d-block w-100"
-                                alt="..."></a>
-                    </div>
-                @endfor
-            </div>
-        </div>
-    </div>
+  @include('includes.carousel')  
 @endsection
-@section('content')
+@section('content1')
+@include('autos.partials.services')
+@endsection
+@section('content2')
 
-@include('partials.services')
-    </div>
-    </div>
+    
 
     <!-- Sección del Auto con imagen centrada -->
     <div class="container-fluid mx-5 mt-5">

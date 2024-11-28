@@ -1,4 +1,4 @@
-@section('content')
+@section('content1')
 <div class="container-fluid">
     <h1 class="h1size mt-2 ms-5">Servicios Premium</h1>
     <div class="row justify-content-center">
@@ -51,8 +51,9 @@
         </div>
     </div>
 </div>
-</div>
-</div>
+@endsection
+@section('content2')
+
 <div class="car-section d-flex align-items-center justify-content-center mt-5">
     <a href="secciones/testDrive.html"><img src="img/gral/auto.png" alt="Imagen del Auto"
             class="img-fluid "></a>
