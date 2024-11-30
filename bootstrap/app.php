@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Middleware\clientes;
+use App\Http\Middleware\Cliente;
 use App\Http\Middleware\Sistemas;
-use App\Http\Middleware\ventas;
+use App\Http\Middleware\Ventas;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -15,9 +15,9 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias([
-            'ventas'=>ventas::class,
+            'ventas'=>Ventas::class,
             'sistemas'=>Sistemas::class,
-            'cliente'=>clientes::class
+            'cliente'=>Cliente::class
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

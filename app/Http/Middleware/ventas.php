@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class ventas
+class Ventas
 {
     /**
      * Handle an incoming request.
@@ -27,11 +27,11 @@ class ventas
         }
 
         if($userRole=='sistemas'){
-            return redirect()->route('sistemas');
+            return redirect()->route('sistemas.index');
         }
 
         if($userRole=='cliente'){
-            return redirect()->route('clientes');
+            return redirect()->route('clientes.index');
         }
     }
 }

@@ -1,4 +1,5 @@
 @include('includes.header')
+@include('layouts.navigation')
 
 <body class="d-flex justify-content-center align-items-center">
     <div class="container-fluid mx-5 mt-5">

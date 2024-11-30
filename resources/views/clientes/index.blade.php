@@ -1,5 +1,7 @@
+@extends('layouts.app')
+@section('title', 'clientes')
 @section('content1')
-    @include('partials.services')
+    @include('clientes.partials.services')
 @endsection
 @section('content2')
 

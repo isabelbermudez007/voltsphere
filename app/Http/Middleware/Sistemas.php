@@ -27,11 +27,11 @@ class Sistemas
         }
 
         if($userRole=='ventas'){
-            return redirect()->route('ventas');
+            return redirect()->route('ventas.index');
         }
 
         if($userRole=='cliente'){
-            return redirect()->route('clientes');
+            return redirect()->route('clientes.index');
         }
     }
 }

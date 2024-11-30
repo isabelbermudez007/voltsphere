@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AutoController;
 use App\Http\Controllers\VentasController;
-use App\Models\Ventas;
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -27,12 +27,20 @@ Route::get('/contacto', function () {
     return view('contacto.index');
 })->name('contacto.index');
 require __DIR__.'/auth.php';
-Route::view('/sistemas','sistemas.index')
-->middleware(['auth', 'verified', 'sistemas'])
-->name('sistemas.index');
-Route::view('/ventas','ventas.index')
-->middleware(['auth', 'verified', 'ventas'])
-->name('ventas.index');
-Route::view('/clientes','clientes.index')
-->middleware(['auth', 'verified', 'cliente'])
-->name('clientes.index');
+Route::middleware(['auth', 'sistemas'])->group(function () {
+    Route::get('/sistemas', function () {
+        return view('sistemas.index');
+    })->name('sistemas.index');
+});
+
+Route::middleware(['auth', 'ventas'])->group(function () {
+    Route::get('/ventas', function () {
+        return view('ventas.index');
+    })->name('ventas.index');
+});
+
+Route::middleware(['auth', 'cliente'])->group(function () {
+    Route::get('/clientes', function () {
+        return view('clientes.index');
+    })->name('clientes.index');
+});

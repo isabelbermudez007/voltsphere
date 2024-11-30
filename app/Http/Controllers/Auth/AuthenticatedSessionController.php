@@ -33,11 +33,11 @@ class AuthenticatedSessionController extends Controller
 
         switch ($userRole) {
             case 'sistemas':
-                return redirect()->intended(route('sistemas'));
+                return redirect()->intended(route('sistemas.index'));
             case 'cliente':
-                return redirect()->intended(route('clientes'));
+                return redirect()->intended(route('clientes.index'));
             case 'ventas':
-                return redirect()->intended(route('ventas'));
+                return redirect()->intended(route('ventas.index'));
             default:
                 Auth::logout();
                 return redirect('/');
