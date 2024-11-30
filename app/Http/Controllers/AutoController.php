@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Auto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AutoController extends Controller
 {
@@ -11,8 +12,9 @@ class AutoController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        return view('autos.index');
+    { 
+        $autos=DB::table('autos')->get();
+        return view('autos.index',compact('autos'));
     }
 
     /**

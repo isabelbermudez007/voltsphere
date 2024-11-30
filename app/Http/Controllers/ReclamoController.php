@@ -12,7 +12,8 @@ class ReclamoController extends Controller
      */
     public function index()
     {
-        //
+        return view('reclamos.index');
+
     }
 
     /**

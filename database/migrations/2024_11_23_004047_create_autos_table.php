@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('autos', function (Blueprint $table) {
             $table->id();
             $table->string("marca");
+            $table->string("imagen")->default('1');
             $table->string("modelo");
             $table->string("color");
             $table->string("descripcion");

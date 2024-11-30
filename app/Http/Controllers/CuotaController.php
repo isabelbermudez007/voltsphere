@@ -12,7 +12,8 @@ class CuotaController extends Controller
      */
     public function index()
     {
-        //
+        return view('cuotas.index');
+
     }
 
     /**

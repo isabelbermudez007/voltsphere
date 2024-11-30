@@ -12,7 +12,8 @@ class TestdriveController extends Controller
      */
     public function index()
     {
-        //
+        return view('testdrives.index');
+
     }
 
     /**

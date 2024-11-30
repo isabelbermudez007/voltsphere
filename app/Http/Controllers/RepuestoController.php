@@ -12,7 +12,8 @@ class RepuestoController extends Controller
      */
     public function index()
     {
-        //
+        return view('repuestos.index');
+
     }
 
     /**

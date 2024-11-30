@@ -12,7 +12,8 @@ class FinanciamientoController extends Controller
      */
     public function index()
     {
-        //
+        return view('financiamientos.index');
+
     }
 
     /**

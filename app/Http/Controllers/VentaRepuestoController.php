@@ -12,7 +12,8 @@ class VentaRepuestoController extends Controller
      */
     public function index()
     {
-        //
+        return view('ventarepuestos.index');
+
     }
 
     /**

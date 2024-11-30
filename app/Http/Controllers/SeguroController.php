@@ -12,7 +12,8 @@ class SeguroController extends Controller
      */
     public function index()
     {
-        //
+        return view('seguros.index');
+
     }
 
     /**

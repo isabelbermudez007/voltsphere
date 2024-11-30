@@ -12,7 +12,8 @@ class SectorController extends Controller
      */
     public function index()
     {
-        //
+        return view('sectores.index');
+
     }
 
     /**
