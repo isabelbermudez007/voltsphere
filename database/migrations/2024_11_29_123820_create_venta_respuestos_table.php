@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('venta_respuestos', function (Blueprint $table) {
+        Schema::create('venta_repuestos', function (Blueprint $table) {
             $table->id();
             $table->date('fecha_venta');
             $table->decimal('factura', 10,2);
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('venta_respuestos');
+        Schema::dropIfExists('venta_repuestos');
     }
 };
