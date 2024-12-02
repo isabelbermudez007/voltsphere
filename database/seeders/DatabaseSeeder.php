@@ -2,9 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Http\Middleware\Cliente;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
@@ -16,6 +18,7 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
         $this->call([AutoSeeder::class]);
+
         User::factory()->create([
             'name' => 'isabel',
             'lastname' => 'bermudez',
@@ -26,32 +29,35 @@ class DatabaseSeeder extends Seeder
             'zip_code' => '1424',
             'email' => 'isabel@gmail.com',
             'password' => Hash::make('1234'),
-              'role' => 'ventas',        
+            'role' => 'ventas',
         ]);
-    
-    User::factory()->create([
-        'name' => 'francisco',
-        'lastname' => 'camacho',
-        'phone' => '11481234',
-        'address' => 'soler 4444',
-        'city' => 'CABA',
-        'state' => 'CABA',
-        'zip_code' => '1414',
-        'email' => 'francisco@gmail.com',
-        'password' => Hash::make('1234'),
-          'role' => 'sistemas',        
-    ]);
-    User::factory()->create([
-        'name' => 'nancy',
-        'lastname' => 'melo',
-        'phone' => '11481234',
-        'address' => 'ortiz 1840',
-        'city' => 'CABA',
-        'state' => 'CABA',
-        'zip_code' => '1414',
-        'email' => 'nancy@gmail.com',
-        'password' => Hash::make('1234'),
-                
-    ]);
-}  
+
+        User::factory()->create([
+            'name' => 'francisco',
+            'lastname' => 'camacho',
+            'phone' => '11481234',
+            'address' => 'soler 4444',
+            'city' => 'CABA',
+            'state' => 'CABA',
+            'zip_code' => '1414',
+            'email' => 'francisco@gmail.com',
+            'password' => Hash::make('1234'),
+            'role' => 'sistemas',
+        ]);
+        User::factory()->create([
+            'name' => 'nancy',
+            'lastname' => 'melo',
+            'phone' => '11481234',
+            'address' => 'ortiz 1840',
+            'city' => 'CABA',
+            'state' => 'CABA',
+            'zip_code' => '1414',
+            'email' => 'nancy@gmail.com',
+            'password' => Hash::make('1234'),
+
+        ]);
+        $this->call([ClienteSeeder::class]);
+        $this->call([SectorSeeder::class]);
+        $this->call([EmpleadoSeeder::class]);
+    }
 }

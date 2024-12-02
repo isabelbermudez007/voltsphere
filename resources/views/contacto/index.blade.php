@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.myapp')
 @section('title', 'contacto')
 @section('aside')
     <div class="col-12 col-md-4 p-0 mb-5 colorFondo">

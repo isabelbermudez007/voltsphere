@@ -3,15 +3,49 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ * Class Reclamo
+ *
+ * @property $id
+ * @property $cliente_id
+ * @property $empleado_id
+ * @property $comentarios
+ * @property $created_at
+ * @property $updated_at
+ *
+ * @property Cliente $cliente
+ * @property Empleado $empleado
+ * @package App
+ * @mixin \Illuminate\Database\Eloquent\Builder
+ */
 class Reclamo extends Model
 {
-    public function cliente ():BelongsTo{
-        return $this->belongsTo(Cliente::class);
+    
+    protected $perPage = 20;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = ['cliente_id', 'empleado_id', 'comentarios'];
+
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function cliente()
+    {
+        return $this->belongsTo(\App\Models\Cliente::class, 'cliente_id', 'id');
     }
-    public function empleado ():BelongsTo{
-        return $this->belongsTo(Empleado::class);
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function empleado()
+    {
+        return $this->belongsTo(\App\Models\Empleado::class, 'empleado_id', 'id');
     }
     
 }

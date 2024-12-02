@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.myapp')
 @section('title', 'autos')
 @section('aside')
     @include('includes.carousel')

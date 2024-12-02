@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->foreignId('cliente_id')->constrained('clientes')->onDelete('cascade');
+            $table->foreignId('empleado_id')->constrained('empleados')->onDelete('cascade');
             $table->string('info');
             $table->decimal('factura', 10,2);
             $table->date('fecha');

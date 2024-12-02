@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.myapp')
 @section('title', 'clientes')
 @section('content1')
     @include('clientes.partials.services')

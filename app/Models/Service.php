@@ -3,15 +3,52 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\MorphMany;
 
+/**
+ * Class Service
+ *
+ * @property $id
+ * @property $cliente_id
+ * @property $empleado_id
+ * @property $info
+ * @property $factura
+ * @property $fecha
+ * @property $observaciones
+ * @property $created_at
+ * @property $updated_at
+ *
+ * @property Cliente $cliente
+ * @property Empleado $empleado
+ * @package App
+ * @mixin \Illuminate\Database\Eloquent\Builder
+ */
 class Service extends Model
 {
-    public function pagos ():MorphMany{
-        return $this->morphMany(Pago::class,'pagable');
+    
+    protected $perPage = 20;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = ['cliente_id', 'empleado_id', 'info', 'factura', 'fecha', 'observaciones'];
+
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function cliente()
+    {
+        return $this->belongsTo(\App\Models\Cliente::class, 'cliente_id', 'id');
     }
-    public function cliente ():BelongsTo{
-        return $this->belongsTo(Cliente::class);
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function empleado()
+    {
+        return $this->belongsTo(\App\Models\Empleado::class, 'empleado_id', 'id');
     }
+    
 }
