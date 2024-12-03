@@ -9,15 +9,10 @@
       </div>
       <!-- Icono 2 -->
       <div class="col-6 col-md-3 text-center mt-3 mb-3">
-        <a href="../formularios/formClientes.html"><img src="../img/iconos/clientes/2.png" alt="Icono 2"
+        <a href="{{route('services.index')}}"><img src="../img/iconos/clientes/2.png" alt="Icono 2"
             class="img-fluid"></a>
 
-      </div>
-      <!-- Icono 3 -->
-      <div class="col-6 col-md-3 text-center mt-3 mb-3">
-        <a href="../formularios/formClientes.html"><img src="../img/iconos/clientes/3.png" alt="Icono 3"
-            class="img-fluid"></a>
-
+      
       </div>
       <!-- Icono 4 -->
       <div class="col-6 col-md-3 text-center mt-3 mb-3">
@@ -37,7 +32,7 @@
       </div>
       <!-- Icono 6 -->
       <div class="col-6 col-md-3 text-center mt-3 mb-3">
-        <a href="../formularios/formClientes.html"><img src="../img/iconos/clientes/6.png" alt="Icono 6"
+        <a href="{{route('reclamos.index')}}"><img src="../img/iconos/clientes/6.png" alt="Icono 6"
             class="img-fluid"></a>
 
       </div>

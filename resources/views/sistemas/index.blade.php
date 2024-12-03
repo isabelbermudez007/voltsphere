@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <!-- Icono 1 -->
             <div class="col-6 col-md-3 text-center mt-3 mb-3">
-                <a href="../formularios/formSistemas.html"><img src="../img/iconos/sistemas/1.png" alt="Icono 1"
+                <a href="{{route('empleados.create')}}"><img src="../img/iconos/sistemas/1.png" alt="Icono 1"
                         class="img-fluid"></a>
 
             </div>

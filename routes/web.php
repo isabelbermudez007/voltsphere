@@ -35,7 +35,6 @@ Route::middleware('auth')->group(function () {
 });
 Route::resource('autos', AutoController::class);
 Route::resource('cuotas', CuotaController::class);
-Route::resource('empleados', EmpleadoController::class);
 Route::resource('financiamientos',FinanciamientoController::class);
 Route::resource('pagos', PagoController::class);
 Route::resource('reclamos', ReclamoController::class);
@@ -56,6 +55,8 @@ Route::middleware(['auth', 'sistemas'])->group(function () {
     Route::get('/sistemas', function () {
         return view('sistemas.index');
     })->name('sistemas.index');
+Route::resource('empleados', EmpleadoController::class);
+
 });
 
 Route::middleware(['auth', 'ventas'])->group(function () {

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Cliente;
+use App\Models\Empleado;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
@@ -29,7 +31,7 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $request->validate ([
+        $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'lastname' => ['required', 'string', 'max:255'],
             'phone' => ['required', 'string', 'max:255'],
@@ -37,7 +39,7 @@ class RegisteredUserController extends Controller
             'city' => ['required', 'string', 'max:255'],
             'state' => ['required', 'string', 'max:255'],
             'zip_code' => ['required', 'string', 'max:10'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
@@ -52,7 +54,30 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-
+        if ($user->rol === 'cliente') {
+            Cliente::create([
+                'user_id' => $user->id,
+                'nombre' => $request->name,
+                'apellido' => $request->apellido,
+                'telefono' => $request->telefono,
+                'email' => $request->email,
+                'direccion' => $request->direccion,
+            ]);
+        } else {
+            Empleado::create([
+                'user_id' => $user->id,
+                'nombre' => $request->name,
+                'apellido' => $request->apellido,
+                'direccion' => $request->direccion,
+                'telefono' => $request->telefono,
+                'email' => $request->email,
+                'cumple' => $request->cumple,
+                'puesto' => $request->puesto,
+                'sueldo' => $request->sueldo,
+                'comision_vendedor' => $request->comision_vendedor,
+                'sector_id' => $request->sector_id,
+            ]);
+        }
         event(new Registered($user));
 
         Auth::login($user);

@@ -3,11 +3,40 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
+/**
+ * Class Repuesto
+ *
+ * @property $id
+ * @property $nombre
+ * @property $precio
+ * @property $stock
+ * @property $created_at
+ * @property $updated_at
+ *
+ * @property VentaRepuesto[] $ventaRepuestos
+ * @package App
+ * @mixin \Illuminate\Database\Eloquent\Builder
+ */
 class Repuesto extends Model
 {
-    public function ventarepuesto ():HasMany{
-        return $this->hasMany(VentaRepuesto::class);
+    
+    protected $perPage = 20;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = ['nombre', 'precio', 'stock'];
+
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function ventaRepuestos()
+    {
+        return $this->hasMany(\App\Models\VentaRepuesto::class, 'id', 'repuesto_id');
     }
+    
 }
