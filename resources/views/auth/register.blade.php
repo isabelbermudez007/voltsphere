@@ -7,33 +7,30 @@
                 @csrf
 
                 <div class="mt-3">
-                    <label for="inputNombre" class="form-label">Nombre</label>
-                    <x-text-input name='name' :value="old('name')" type="text" class="form-control" id="inputNombre" />
+                    <label for="name" class="form-label">Nombre</label>
+                    <x-text-input name='name' :value="old('name')" type="text" class="form-control" id="name" />
                 </div>
                 <div class="mt-3">
-                    <label for="inputEmail4" class="form-label">Apellido</label>
+                    <label for="lastname" class="form-label">Apellido</label>
                     <x-text-input name='lastname' :value="old('lastname')" type="text" class="form-control"
-                        id="inputLastname" />
+                        id="lastname" />
                 </div>
 
                 <div class="mt-3">
-                    <label for="inputEmail" class="form-label">Correo electrónico</label>
-                    <x-text-input name='email' :value="old('email')" type="email" class="form-control"
-                        id="inputEmail" />
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <x-text-input name='email' :value="old('email')" type="email" class="form-control" id="email" />
                 </div>
                 <div class="mt-3">
-                    <label for="inputDirec" class="form-label">Dirección</label>
-                    <x-text-input name='address' :value="old('address')" type="text" class="form-control"
-                        id="inputDirec" />
+                    <label for="address" class="form-label">Dirección</label>
+                    <x-text-input name='address' :value="old('address')" type="text" class="form-control" id="address" />
                 </div>
                 <div class="mt-3">
-                    <label for="inputCiudad" class="form-label">Ciudad</label>
-                    <x-text-input name='city' :value="old('city')" type="text" class="form-control"
-                        id="inputCiudad" />
+                    <label for="city" class="form-label">Ciudad</label>
+                    <x-text-input name='city' :value="old('city')" type="text" class="form-control" id="city" />
                 </div>
                 <div class="mt-3">
-                    <label for="inputEstado" class="form-label">Estado</label>
-                    <select name='state' id="inputEstado" class="form-select">
+                    <label for="state" class="form-label">Estado</label>
+                    <select name='state' id="state" class="form-select">
                         <option selected>Selecciona...</option>
                         <option :value='CABA' {{ old('state') == 'CABA' ? 'select' : '' }}>Ciudad Autónoma de
                             Buenos Aires
@@ -44,9 +41,9 @@
                     </select>
                 </div>
                 <div class="mt-3">
-                    <label for="inputCp" class="form-label">CP</label>
+                    <label for="zip_code" class="form-label">CP</label>
                     <x-text-input name='zip_code' :value="old('zip_code')" type="text" class="form-control"
-                        id="inputCp" />
+                        id="zip_code" />
                 </div>
 
                 <div class="mt-3 text-center">
