@@ -15,11 +15,25 @@
                     <x-text-input name='lastname' :value="old('lastname')" type="text" class="form-control"
                         id="lastname" />
                 </div>
+                <div class="mt-3">
+                    <label for="phone" class="form-label">Teléfono</label>
+                    <x-text-input name='phone' :value="old('phone')" type="text" class="form-control" id="phone" />
+                </div>
 
                 <div class="mt-3">
                     <label for="email" class="form-label">Correo electrónico</label>
                     <x-text-input name='email' :value="old('email')" type="email" class="form-control" id="email" />
                 </div>
+                <div class="mt-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <x-text-input name='password' type="password" class="form-control" id="password" />
+                </div>
+                <div class="mt-3">
+                    <label for="password_confirmation" class="form-label">Confirmar Contraseña</label>
+                    <x-text-input name='password_confirmation' type="password" class="form-control"
+                        id="password_confirmation" />
+                </div>
+
                 <div class="mt-3">
                     <label for="address" class="form-label">Dirección</label>
                     <x-text-input name='address' :value="old('address')" type="text" class="form-control" id="address" />
@@ -32,12 +46,13 @@
                     <label for="state" class="form-label">Estado</label>
                     <select name='state' id="state" class="form-select">
                         <option selected>Selecciona...</option>
-                        <option :value='CABA' {{ old('state') == 'CABA' ? 'select' : '' }}>Ciudad Autónoma de
+                        <option :value='CABA' {{ old('state') == 'CABA' ? 'selected' : '' }}>Ciudad Autónoma de
                             Buenos Aires
                         </option>
-                        <option :value='Junin' {{ old('state') == 'Junin' ? 'select' : '' }}>Junin</option>
-                        <option :value='Salta' {{ old('state') == 'Salta' ? 'select' : '' }}>Salta</option>
-                        <option :value='Córdoba' {{ old('state') == 'Córdoba' ? 'select' : '' }}>Córdoba</option>
+                        <option :value='Junin' {{ old('state') == 'Junin' ? 'selected' : '' }}>Junin</option>
+                        <option :value='Salta' {{ old('state') == 'Salta' ? 'selected' : '' }}>Salta</option>
+                        <option :value='Córdoba' {{ old('state') == 'Córdoba' ? 'selected' : '' }}>Córdoba
+                        </option>
                     </select>
                 </div>
                 <div class="mt-3">
